@@ -1,15 +1,6 @@
-set gfn=Knack_Nerd_Font:h14,Hannotate\ SC:h14,Menlo:h14
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
@@ -19,25 +10,23 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'prettier/vim-prettier', { 
 	\ 'do': 'yarn install', 
 	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
-" added nerdtree
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'airblade/vim-gitgutter'
-" Plugin 'w0rp/ale'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'kshenoy/vim-signature'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-"Plugin 'shougo/deoplete.nvim'
 Plugin 'fatih/vim-go'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/es.next.syntax.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-commentary'
 Plugin 'junegunn/goyo.vim'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'alvan/vim-closetag'
@@ -50,6 +39,12 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
 Plugin 'ryanoasis/vim-devicons'
 
+" Lint
+" Plugin 'w0rp/ale'
+
+" AutoComplete
+"Plugin 'shougo/deoplete.nvim'
+
 " Themes
 Plugin 'dracula/vim'
 Plugin 'vim-airline/vim-airline-themes'
@@ -59,45 +54,30 @@ Plugin 'reedes/vim-thematic'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 colorscheme pencil
-"let g:airline_theme = 'pencil'
 let g:pencil_terminal_italics = 1
-"let g:pencil_neutral_code_bg = 0   " 0=gray (def), 1=normal
-" let g:pencil_higher_contrast_ui = 1   " 0=low (def), 1=high
+let g:pencil_neutral_code_bg = 1 " 0=gray (def), 1=normal
+let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
 let g:pencil_spell_undercurl = 1       " 0=underline, 1=undercurl (def)
 let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
 let g:pencil_neutral_code_bg = 1   " 0=gray (def), 1=normal
 let g:pencil_gutter_color = 1      " 0=mono (def), 1=color
 
+" Javascript related
 let g:jsx_ext_required = 0
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
-" use tabs over spaces
+" Prettier related
 let g:prettier#config#use_tabs = 'false'
-" print semicolons
 let g:prettier#config#semi = 'false'
-" print spaces between brackets
 let g:prettier#config#bracket_spacing = 'false'
-" none|es5|all
 let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'true'
 let g:prettier#config#print_width = 80
-
 
 " git status update time
 set updatetime=200
@@ -189,10 +169,12 @@ let g:webdevicons_enable_airline_statusline = 1
 let g:webdevicons_enable_ctrlp = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
 
+
+" Normal settins
+set gfn=Knack_Nerd_Font:h14,Hannotate\ SC:h14,Menlo:h14
+set nocompatible              " be iMproved, required
+filetype off                  " required
 syntax on
-"if has("gui_macvim")
- " set background=dark
-"endif
 set showmode
 set number
 set hlsearch
@@ -227,7 +209,6 @@ set guioptions-=r
 set guioptions-=R
 set guioptions-=l
 set guioptions-=L
-
 "Always show current position
 set ruler
 
