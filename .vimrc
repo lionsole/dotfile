@@ -38,6 +38,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
 Plugin 'ryanoasis/vim-devicons'
+" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'   "Too slow
 
 " Lint
 " Plugin 'w0rp/ale'
@@ -50,12 +51,15 @@ Plugin 'dracula/vim'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/tomorrow-theme'
 Plugin 'reedes/vim-thematic'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'ajmwagar/vim-deus'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme pencil
+highlight Comment cterm=italic
 let g:pencil_terminal_italics = 1
 let g:pencil_neutral_code_bg = 1 " 0=gray (def), 1=normal
 let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
@@ -120,15 +124,12 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
 
 " integer value [0|1]
 " This will make the list of non closing tags case sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
-"
 let g:closetag_emptyTags_caseSensitive = 1
 
 " Shortcut for closing tags, default is '>'
-"
 let g:closetag_shortcut = '>'
 
 " Add > at current position without closing the current tag, default is '<leader>>'
-"
 let g:closetag_close_shortcut = '<leader>>'
 
 " nerdtree 
@@ -136,24 +137,28 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeWinPos = "right"
+let g:NERDChristmasTree = 1
+let g:NERDTreeHighlightCursorline=1
+let g:NERDTreeShowLineNumbers=1
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeStatusline=-1
+let g:NERDTreeWinSize=40
 
 " vim emmet
 let g:user_emmet_leader_key='<C-Z>'
 
 " ctrlp
-let g:ctrlp_by_filename = 1
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
-let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_match_window = 'order:ttb'
+
 
 " Mark down
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_new_list_item_indent = 2
+
 " Instance markdown
 let g:instant_markdown_autostart = 0
 
@@ -169,6 +174,8 @@ let g:webdevicons_enable_airline_statusline = 1
 let g:webdevicons_enable_ctrlp = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
 
+" airline 
+let g:airline_theme='base16_google'
 
 " Normal settins
 set gfn=Knack_Nerd_Font:h14,Hannotate\ SC:h14,Menlo:h14
@@ -187,7 +194,7 @@ set fileformat=unix
 set cursorline
 set number                     " Show current line number
 set relativenumber             " Show relative line numbers
-"set cursorcolumn
+" set cursorcolumn
 " 选中状态下 Ctrl+c 复制
 vmap <C-c> "+y
 " 代码补全
@@ -196,6 +203,9 @@ set completeopt=preview,menu
 set clipboard+=unnamed 
 " 自动缩进
 set autoindent
+"get rid of | characters of VertSplit
+set fillchars+=vert:│
+hi VertSplit ctermbg=NONE guibg=NONE
 
 "隐藏顶部标签栏"
 set showtabline=0
@@ -221,7 +231,7 @@ set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
     set wildignore+=.git\*,.hg\*,.svn\*
 else
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store,*/node_modules/*
 endif
 
 " Configure backspace so it acts as it should act
