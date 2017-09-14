@@ -178,7 +178,7 @@ let g:webdevicons_conceal_nerdtree_brackets = 1
 let g:airline_theme='base16_google'
 
 " Normal settins
-set gfn=Knack_Nerd_Font:h14,Hannotate\ SC:h14,Menlo:h14
+set gfn=Knack_Nerd_Font:h14,Hannotate_SC:h14,Menlo:h14
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
@@ -204,8 +204,8 @@ set clipboard+=unnamed
 " 自动缩进
 set autoindent
 "get rid of | characters of VertSplit
-set fillchars+=vert:│
-hi VertSplit ctermbg=NONE guibg=NONE
+" set fillchars+=vert:│
+" hi VertSplit ctermbg=NONE guibg=NONE
 
 "隐藏顶部标签栏"
 set showtabline=0
