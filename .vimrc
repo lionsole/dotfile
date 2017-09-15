@@ -4,8 +4,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 Plugin 'rizzatti/dash.vim'
 Plugin 'prettier/vim-prettier', { 
 	\ 'do': 'yarn install', 
@@ -13,19 +11,13 @@ Plugin 'prettier/vim-prettier', {
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'digitaltoad/vim-pug'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'kshenoy/vim-signature'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'fatih/vim-go'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'othree/yajs.vim'
-Plugin 'othree/es.next.syntax.vim'
-Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'junegunn/goyo.vim'
 Plugin 'Valloric/MatchTagAlways'
@@ -35,8 +27,6 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 "Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'elzr/vim-json'
 Plugin 'ryanoasis/vim-devicons'
 " Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'   "Too slow
 
@@ -45,9 +35,24 @@ Plugin 'ryanoasis/vim-devicons'
 
 " AutoComplete
 "Plugin 'shougo/deoplete.nvim'
+Plugin 'othree/html5.vim'
+Plugin 'sheerun/vim-polyglot'
+
+" Languages
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'fatih/vim-go'
+Plugin 'othree/yajs.vim'
+Plugin 'othree/es.next.syntax.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'elzr/vim-json'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'digitaltoad/vim-pug'
 
 " Themes
 Plugin 'dracula/vim'
+Plugin 'KabbAmine/yowish.vim'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/tomorrow-theme'
 Plugin 'reedes/vim-thematic'
