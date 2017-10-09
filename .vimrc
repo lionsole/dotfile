@@ -16,7 +16,6 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'kshenoy/vim-signature'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'junegunn/goyo.vim'
@@ -25,13 +24,17 @@ Plugin 'alvan/vim-closetag'
 Plugin 'AndrewRadev/undoquit.vim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
-"Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 Plugin 'ryanoasis/vim-devicons'
-" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'   "Too slow
+Plugin 'easymotion/vim-easymotion'
 
 " Lint
 " Plugin 'w0rp/ale'
+
+" Neos
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 
 " AutoComplete
 "Plugin 'shougo/deoplete.nvim'
@@ -196,7 +199,7 @@ set showcmd
 set mouse=a
 set is 
 set fileformat=unix
-set cursorline
+" set cursorline
 set number                     " Show current line number
 set relativenumber             " Show relative line numbers
 " set cursorcolumn
@@ -226,6 +229,11 @@ set guioptions-=l
 set guioptions-=L
 "Always show current position
 set ruler
+
+" 添加空行
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+map ; :
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -368,6 +376,7 @@ endif
 
 
 " Neocomplete
+
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
