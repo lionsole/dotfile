@@ -1,0 +1,127 @@
+{
+  "editor.fontFamily": "Cousine,Hannotate SC ",
+  "editor.fontSize": 15,
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.lineHeight": 20,
+  "editor.snippetSuggestions": "top",
+  "editor.minimap.enabled": false,
+  "editor.cursorStyle": "block",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.renderIndentGuides": false,
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  "editor.codeLens": false,
+  "editor.renderControlCharacters": true,
+  "editor.minimap.renderCharacters": false,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "off",
+  "files.associations": {
+    "*.wxml": "html",
+    "*.wxss": "css"
+  },
+  "explorer.openEditors.visible": 5,
+  "explorer.openEditors.dynamicHeight": true,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.editor.showTabs": false,
+  "workbench.editor.enablePreview": true,
+  "workbench.statusBar.visible": true,
+  "workbench.iconTheme": "file-icons-colourless",
+  "workbench.activityBar.visible": false,
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Dracula Soft",
+  "window.zoomLevel": 0,
+  "window.newWindowDimensions": "inherit",
+  "window.nativeTabs": true,
+  "search.followSymlinks": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "menlo",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.proseWrap": false,
+  "prettier.printWidth": 80,
+  "prettier.bracketSpacing": false,
+  "projectManager.treeview.visible": false,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.autoImportSuggestions.enabled": false,
+  "gitlens.blame.line.enabled": false,
+  "C_Cpp.intelliSenseEngine": "Default",
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.gutterIconPath": "/Users/tan/Pictures/Sets/face-icon.png",
+  "gitlens.gitExplorer.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "vim.useSystemClipboard": true,
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "after": [":"]
+    },
+    {
+      "before": [" "],
+      "after": ["/"]
+    },
+    {
+      "before": ["u"],
+      "commands": [
+        {
+          "command": "undo",
+          "when": "editorTextFocus && !editorReadonly"
+        }
+      ]
+    },
+    {
+      "before": ["U"],
+      "commands": [
+        {
+          "command": "editor.action.transformToUppercase"
+        }
+      ]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": [
+        {
+          "command": "workbench.action.navigateForward"
+        }
+      ]
+    },
+    {
+      "before": ["g", "o"],
+      "commands": [
+        {
+          "command": "workbench.action.navigateBack"
+        }
+      ]
+    },
+    {
+      "before": ["g", "p"],
+      "commands": [
+        {
+          "command": "editor.action.previewDeclaration"
+        }
+      ]
+    },
+    {
+      "before": ["g", "u"],
+      "commands": [
+        {
+          "command": "editor.action.goToDeclaration",
+          "when": "editorTextFocus && !isInEmbeddedEditor"
+        }
+      ]
+    }
+  ],
+  "workbench.panel.location": "bottom",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": true,
+    "suppressWelcomeNotice": false
+  }
+}
