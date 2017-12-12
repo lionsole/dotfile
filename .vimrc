@@ -97,11 +97,11 @@ set signcolumn=yes
 let g:gitgutter_highlight_lines = 0
 
 " vim javascript
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_conceal_function             = "ƒ"
-let g:javascript_conceal_null                 = "ø"
-let g:javascript_conceal_undefined            = "¿"
-let g:javascript_conceal_NaN                  = "ℕ"
+" let g:javascript_plugin_jsdoc = 1
+" let g:javascript_conceal_function             = "ƒ"
+" let g:javascript_conceal_null                 = "ø"
+" let g:javascript_conceal_undefined            = "¿"
+" let g:javascript_conceal_NaN                  = "ℕ"
 set conceallevel=2
 map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
@@ -199,7 +199,7 @@ set showcmd
 set mouse=a
 set is 
 set fileformat=unix
-" set cursorline
+set cursorline
 set number                     " Show current line number
 set relativenumber             " Show relative line numbers
 " set cursorcolumn
