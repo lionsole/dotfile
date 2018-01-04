@@ -48,7 +48,7 @@ Plugin 'fatih/vim-go'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/es.next.syntax.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'digitaltoad/vim-pug'
@@ -67,8 +67,8 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme pencil
-highlight Comment cterm=italic
-let g:pencil_terminal_italics = 1
+" highlight Comment cterm=italic
+let g:pencil_terminal_italics = 0
 let g:pencil_neutral_code_bg = 1 " 0=gray (def), 1=normal
 let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
 let g:pencil_spell_undercurl = 1       " 0=underline, 1=undercurl (def)
@@ -151,7 +151,7 @@ let g:NERDTreeHighlightCursorline=1
 let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeStatusline=-1
-let g:NERDTreeWinSize=40
+let g:NERDTreeWinSize=30
 
 " vim emmet
 let g:user_emmet_leader_key='<C-Z>'
@@ -163,12 +163,12 @@ let g:ctrlp_match_window = 'order:ttb'
 
 
 " Mark down
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_json_frontmatter = 1
-let g:vim_markdown_new_list_item_indent = 2
+" let g:vim_markdown_folding_disabled = 1
+" let g:vim_markdown_json_frontmatter = 1
+" let g:vim_markdown_new_list_item_indent = 2
 
-" Instance markdown
-let g:instant_markdown_autostart = 0
+" " Instance markdown
+" let g:instant_markdown_autostart = 0
 
 " vim-devicons
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
