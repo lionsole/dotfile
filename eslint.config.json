@@ -1,5 +1,4 @@
 {
-  "origin": "https://github.com/standard/eslint-config-standard",
   "parserOptions": {
     "ecmaVersion": 8,
     "ecmaFeatures": {
