@@ -1,19 +1,23 @@
 {
-  "editor.fontFamily": "Cousine,Hannotate SC ",
+  "editor.fontFamily": "Menlo,Cousine,Hannotate SC ",
   "editor.fontSize": 15,
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
-  "editor.lineHeight": 20,
+  "editor.lineHeight": 21,
   "editor.snippetSuggestions": "top",
   "editor.minimap.enabled": false,
   "editor.cursorStyle": "block",
   "editor.wordWrap": "wordWrapColumn",
-  "editor.renderIndentGuides": false,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.lineNumbers": "relative",
   "editor.codeLens": false,
   "editor.renderControlCharacters": true,
   "editor.minimap.renderCharacters": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
   "files.insertFinalNewline": true,
   "files.autoSave": "off",
   "files.associations": {
@@ -29,7 +33,6 @@
   "workbench.iconTheme": "file-icons-colourless",
   "workbench.activityBar.visible": false,
   "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Dracula Soft",
   "window.zoomLevel": 0,
   "window.newWindowDimensions": "inherit",
   "window.nativeTabs": true,
@@ -37,33 +40,49 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "menlo",
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.jsxBracketSameLine": true,
-  "prettier.proseWrap": false,
-  "prettier.printWidth": 80,
-  "prettier.bracketSpacing": false,
   "projectManager.treeview.visible": false,
   "typescript.implementationsCodeLens.enabled": true,
   "typescript.autoImportSuggestions.enabled": false,
   "gitlens.blame.line.enabled": false,
-  "C_Cpp.intelliSenseEngine": "Default",
-  "bookmarks.saveBookmarksInProject": true,
-  "bookmarks.gutterIconPath": "/Users/tan/Pictures/Sets/face-icon.png",
   "gitlens.gitExplorer.enabled": false,
   "gitlens.statusBar.enabled": false,
+  "zenMode.hideStatusBar": false,
+  "eslint.alwaysShowStatus": true,
+  "eslint.options": {
+    "configFile": "/Users/tan/.vim/eslint.config.json"
+  },
   "vim.useSystemClipboard": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors": {
+    "normal": "#2B2D42",
+    "insert": "#4C4C4C",
+    "visual": "#00A896",
+    "visualline": "#52B095",
+    "visualblock": "#028090",
+    "replace": "#000000"
+  },
+  "vim.visualstar": true,
   "vim.otherModesKeyBindingsNonRecursive": [
     {
-      "before": [";"],
-      "after": [":"]
+      "before": [
+        ";"
+      ],
+      "after": [
+        ":"
+      ]
     },
     {
-      "before": [" "],
-      "after": ["/"]
+      "before": [
+        " "
+      ],
+      "after": [
+        "/"
+      ]
     },
     {
-      "before": ["u"],
+      "before": [
+        "u"
+      ],
       "commands": [
         {
           "command": "undo",
@@ -72,7 +91,9 @@
       ]
     },
     {
-      "before": ["U"],
+      "before": [
+        "U"
+      ],
       "commands": [
         {
           "command": "editor.action.transformToUppercase"
@@ -80,7 +101,10 @@
       ]
     },
     {
-      "before": ["g", "i"],
+      "before": [
+        "g",
+        "i"
+      ],
       "commands": [
         {
           "command": "workbench.action.navigateForward"
@@ -88,7 +112,10 @@
       ]
     },
     {
-      "before": ["g", "o"],
+      "before": [
+        "g",
+        "o"
+      ],
       "commands": [
         {
           "command": "workbench.action.navigateBack"
@@ -96,7 +123,10 @@
       ]
     },
     {
-      "before": ["g", "p"],
+      "before": [
+        "g",
+        "p"
+      ],
       "commands": [
         {
           "command": "editor.action.previewDeclaration"
@@ -104,16 +134,51 @@
       ]
     },
     {
-      "before": ["g", "u"],
+      "before": [
+        "g",
+        "n"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.focusNextGroup"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "j"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.openPreviousEditorFromHistory"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "u"
+      ],
       "commands": [
         {
           "command": "editor.action.goToDeclaration",
           "when": "editorTextFocus && !isInEmbeddedEditor"
         }
       ]
+    },
+    {
+      "before": [
+        "t",
+        "p"
+      ],
+      "commands": [
+        {
+          "command": "eslint.executeAutofix"
+        }
+      ]
     }
   ],
-  "workbench.panel.location": "bottom",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -123,5 +188,12 @@
     "suppressNoRepositoryWarning": false,
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": false
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Panda Syntax",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#52B095",
+    "statusBar.noFolderBackground": "#52B095",
+    "statusBar.debuggingBackground": "#52B095"
   }
 }
