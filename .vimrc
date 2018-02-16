@@ -213,7 +213,7 @@ set clipboard+=unnamed
 set autoindent
 "get rid of | characters of VertSplit
 " set fillchars+=vert:│
-" hi VertSplit ctermbg=NONE guibg=NONE
+hi Normal ctermbg=NONE guibg=NONE
 
 "隐藏顶部标签栏"
 set showtabline=0
