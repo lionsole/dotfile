@@ -27,6 +27,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-syntastic/syntastic'
 
 " Lint
 " Plugin 'w0rp/ale'
@@ -107,6 +108,16 @@ map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<
 
 " css vim
 let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " match tag
 let g:mta_use_matchparen_group = 1
