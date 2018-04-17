@@ -27,10 +27,10 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'vim-syntastic/syntastic'
 
 " Lint
-" Plugin 'w0rp/ale'
+Plugin 'w0rp/ale'
+" Plugin 'vim-syntastic/syntastic'
 
 " Neos
 " Plugin 'Shougo/neocomplete'
@@ -44,15 +44,15 @@ Plugin 'sheerun/vim-polyglot'
 
 " Languages
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+" Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
-Plugin 'othree/yajs.vim'
-Plugin 'othree/es.next.syntax.vim'
+" Plugin 'othree/yajs.vim'
+" Plugin 'othree/es.next.syntax.vim'
 Plugin 'mattn/emmet-vim'
 " Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'digitaltoad/vim-pug'
+" Plugin 'othree/javascript-libraries-syntax.vim'
+" Plugin 'digitaltoad/vim-pug'
 
 " Themes
 Plugin 'dracula/vim'
@@ -110,9 +110,9 @@ map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 " syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -187,7 +187,7 @@ let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 0
 let g:airline_powerline_fonts = 1
 let g:webdevicons_enable = 1
-let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_nerdtree = 0
 let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
 let g:webdevicons_enable_ctrlp = 1
@@ -195,6 +195,18 @@ let g:webdevicons_conceal_nerdtree_brackets = 1
 
 " airline 
 let g:airline_theme='base16_google'
+
+" ale config
+let g:ale_fixers = {
+\   'javascript': ['standard'],
+\}
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+let g:ale_completion_enabled = 1
+let g:ale_sign_error = '☹︎'
+let g:ale_sign_warning = '--'
+hi ALEErrorSign ctermbg=NONE
 
 " Normal settins
 set gfn=Knack_Nerd_Font:h14,Hannotate_SC:h14,Menlo:h14
