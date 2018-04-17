@@ -32,11 +32,6 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'w0rp/ale'
 " Plugin 'vim-syntastic/syntastic'
 
-" Neos
-" Plugin 'Shougo/neocomplete'
-" Plugin 'Shougo/neosnippet'
-" Plugin 'Shougo/neosnippet-snippets'
-
 " AutoComplete
 "Plugin 'shougo/deoplete.nvim'
 Plugin 'othree/html5.vim'
@@ -77,7 +72,7 @@ let g:pencil_neutral_code_bg = 1   " 0=gray (def), 1=normal
 let g:pencil_gutter_color = 1      " 0=mono (def), 1=color
 
 " Javascript related
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
