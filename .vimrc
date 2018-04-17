@@ -97,11 +97,6 @@ set signcolumn=yes
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_override_sign_column_highlight = 0
 
-" todo : not working
-hi GitGutterAdd ctermbg=none
-hi GitGutterChange ctermbg=none
-hi GitGutterDelete ctermbg=none
-hi GitGutterChangeDelete ctermbg=none
 
 " vim javascript
 " let g:javascript_plugin_jsdoc = 1
@@ -109,7 +104,6 @@ hi GitGutterChangeDelete ctermbg=none
 " let g:javascript_conceal_undefined            = "¿"
 " let g:javascript_conceal_NaN                  = "ℕ"
 set conceallevel=2
-map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
 " css vim
 let g:cssColorVimDoNotMessMyUpdatetime = 1
@@ -368,4 +362,10 @@ if has("mac") || has("macunix")
   vmap <D-k> <M-k>
 endif
 
+
+" gitgutter color config, this place to cover preconfig
+hi GitGutterAdd ctermbg=none
+hi GitGutterChange ctermbg=none
+hi GitGutterDelete ctermbg=none
+hi GitGutterChangeDelete ctermbg=none
 
