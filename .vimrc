@@ -51,8 +51,7 @@ Plugin 'fatih/vim-go'
 Plugin 'mattn/emmet-vim'
 " Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
-" Plugin 'othree/javascript-libraries-syntax.vim'
-" Plugin 'digitaltoad/vim-pug'
+Plugin 'digitaltoad/vim-pug'
 
 " Themes
 Plugin 'dracula/vim'
@@ -86,7 +85,7 @@ let g:javascript_plugin_flow = 1
 " Prettier related
 let g:prettier#config#use_tabs = 'false'
 let g:prettier#config#semi = 'false'
-let g:prettier#config#bracket_spacing = 'false'
+let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'true'
@@ -96,10 +95,16 @@ let g:prettier#config#print_width = 80
 set updatetime=200
 set signcolumn=yes
 let g:gitgutter_highlight_lines = 0
+let g:gitgutter_override_sign_column_highlight = 0
+
+" todo : not working
+hi GitGutterAdd ctermbg=none
+hi GitGutterChange ctermbg=none
+hi GitGutterDelete ctermbg=none
+hi GitGutterChangeDelete ctermbg=none
 
 " vim javascript
 " let g:javascript_plugin_jsdoc = 1
-" let g:javascript_conceal_function             = "ƒ"
 " let g:javascript_conceal_null                 = "ø"
 " let g:javascript_conceal_undefined            = "¿"
 " let g:javascript_conceal_NaN                  = "ℕ"
@@ -108,16 +113,6 @@ map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<
 
 " css vim
 let g:cssColorVimDoNotMessMyUpdatetime = 1
-
-" syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " match tag
 let g:mta_use_matchparen_group = 1
@@ -130,25 +125,10 @@ let g:mta_filetypes = {
 		\ 'jsx': 1
     \}
 
-" close tag
-" filenames like *.xml, *.html, *.xhtml, ...
-" Then after you press <kbd>&gt;</kbd> in these files, this plugin will try to close the current tag.
-"
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx'
-
-" filenames like *.xml, *.xhtml, ...
-" This will make the list of non closing tags self closing in the specified files.
-"
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
-
-" integer value [0|1]
-" This will make the list of non closing tags case sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
 let g:closetag_emptyTags_caseSensitive = 1
-
-" Shortcut for closing tags, default is '>'
 let g:closetag_shortcut = '>'
-
-" Add > at current position without closing the current tag, default is '<leader>>'
 let g:closetag_close_shortcut = '<leader>>'
 
 " nerdtree 
@@ -171,15 +151,6 @@ let g:user_emmet_leader_key='<C-Z>'
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_match_window = 'order:ttb'
-
-
-" Mark down
-" let g:vim_markdown_folding_disabled = 1
-" let g:vim_markdown_json_frontmatter = 1
-" let g:vim_markdown_new_list_item_indent = 2
-
-" " Instance markdown
-" let g:instant_markdown_autostart = 0
 
 " vim-devicons
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
