@@ -30,23 +30,25 @@ Plugin 'easymotion/vim-easymotion'
 
 " Lint
 Plugin 'w0rp/ale'
-" Plugin 'vim-syntastic/syntastic'
 
 " AutoComplete
 "Plugin 'shougo/deoplete.nvim'
 Plugin 'othree/html5.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'ervandew/supertab'
 
 " Languages
 Plugin 'pangloss/vim-javascript'
-" Plugin 'mxw/vim-jsx'
+Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
-" Plugin 'othree/yajs.vim'
-" Plugin 'othree/es.next.syntax.vim'
+Plugin 'othree/yajs.vim'
+Plugin 'othree/es.next.syntax.vim'
 Plugin 'mattn/emmet-vim'
 " Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'moll/vim-node'
 
 " Themes
 Plugin 'dracula/vim'
@@ -214,8 +216,8 @@ set guioptions-=L
 set ruler
 
 " 添加空行
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+" nmap <S-Enter> O<Esc>
+" nmap <CR> o<Esc>
 map ; :
 
 " :W sudo saves the file
