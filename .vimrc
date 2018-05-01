@@ -27,7 +27,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'easymotion/vim-easymotion'
-
+Plugin 'kristijanhusak/vim-carbon-now-sh'
 " Lint
 Plugin 'w0rp/ale'
 
@@ -91,13 +91,18 @@ set updatetime=200
 set signcolumn=yes
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '*'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '0-'
+let g:gitgutter_sign_modified_removed = '*-'
 
 
 " vim javascript
 " let g:javascript_plugin_jsdoc = 1
-" let g:javascript_conceal_null                 = "ø"
-" let g:javascript_conceal_undefined            = "¿"
-" let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
 set conceallevel=2
 
 " css vim
