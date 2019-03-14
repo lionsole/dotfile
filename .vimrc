@@ -197,6 +197,19 @@ vmap <C-c> "+y
 set completeopt=preview,menu
 " 共享剪贴板  
 set clipboard+=unnamed 
+" set paste
+" set go+=a
+function! ClipboardYank()
+  call system('pbcopy', @@)
+endfunction
+function! ClipboardPaste()
+  let @@ = system('pbpaste')
+endfunction
+
+vnoremap <silent> y y:call ClipboardYank()<cr>
+vnoremap <silent> d d:call ClipboardYank()<cr>
+nnoremap <silent> p :call ClipboardPaste()<cr>p
+
 " 自动缩进
 set autoindent
 "get rid of | characters of VertSplit
